@@ -19,12 +19,6 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-
 import com.neo.domain.Cliente;
 import com.neo.dto.AtualizarClienteDto;
 import com.neo.dto.ClienteDto;

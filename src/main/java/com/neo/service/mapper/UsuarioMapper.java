@@ -1,7 +1,6 @@
 package com.neo.service.mapper;
 
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +13,6 @@ public interface UsuarioMapper {
 
 	UsuarioMapper INSTANCE = Mappers.getMapper(UsuarioMapper.class);
 
-	@Mapping(target = "idUsuario", ignore = true)
 	Usuario dtoToUsuario(UsuarioDto usuarioDto);
 
 }

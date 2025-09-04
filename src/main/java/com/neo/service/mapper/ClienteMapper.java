@@ -16,16 +16,15 @@ import com.neo.dto.ClienteDto;
 @Mapper(componentModel = "spring")
 public interface ClienteMapper {
 
-	ClienteMapper INSTANCE = Mappers.getMapper(ClienteMapper.class);
+    ClienteMapper INSTANCE = Mappers.getMapper(ClienteMapper.class);
 
-    @BeanMapping(nullValuePropertyMappingStrategy  = NullValuePropertyMappingStrategy.IGNORE)
-    @Mapping(target = "idCliente", ignore = true)
+    // Atualiza entidade a partir de DTO de atualização
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     void dtoToCliente(AtualizarClienteDto atualizarClienteDto, @MappingTarget Cliente entity);
-    
-    @Mapping(target = "idCliente", ignore = true)
+
+    // Converte DTO para entidade
     Cliente dtoToCliente(ClienteDto clienteDto);
-    
-    @Mapping(target = "idade", ignore = true)
+
+    // Converte entidade para DTO
     ClienteDto clienteToDto(Cliente entity);
-    
 }
