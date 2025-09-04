@@ -20,6 +20,7 @@ public class SecurityConfig {
 	        paths.matcher(HttpMethod.POST, "/login/**"),
 	        paths.matcher("/h2-console/**"),
 	        paths.matcher(HttpMethod.POST, "/usuarios/**"),
+	        paths.matcher(HttpMethod.GET, "/swagger-ui.html/**"),
 	        paths.matcher(HttpMethod.GET, "/swagger-ui/**"),
 	        paths.matcher(HttpMethod.GET, "/v3/**")
 	    );
